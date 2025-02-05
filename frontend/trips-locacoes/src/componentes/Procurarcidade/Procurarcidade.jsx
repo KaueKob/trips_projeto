@@ -10,10 +10,8 @@ const Procurarcidade = () => {
   const handleSearch = () => {
     if (!cidade.trim()) return; // Evitar buscar se a cidade estiver vazia
 
-    const cidadeCodificada = encodeURIComponent(cidade);
-
     axios
-      .get(`http://127.0.0.1:8000/acomodacoes/?cidade=${cidadeCodificada}`)
+      .get(`http://127.0.0.1:8000/acomodacoes/?cidade=${cidade}`)
       .then((response) => {
         if (response.data.acomodacoes.length > 0) {
           navigate(`/pagecidade`, {

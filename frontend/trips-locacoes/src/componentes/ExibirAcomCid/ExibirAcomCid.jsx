@@ -8,21 +8,29 @@ const ExibirAcomCid = () => {
     acomodacoes: [],
     cidade: "",
   };
-
+  console.log(cidade, "cidade2");
   if (!cidade) {
-    return <div>Sem cidade selecionada.</div>; // Caso não venha a cidade, exibe uma mensagem
+    return <div>Sem cidade selecionada.</div>;
   }
 
-  // Função para navegar até a página de detalhes da acomodação
+  //remoça˜o de acentos e espaços, seguindo post no stackoverflow
+  //https://stackoverflow.com/questions/990904/remove-accents-diacritics-in-a-string-in-javascript
+  const cidadeTrim = cidade
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s/g, "")
+    .toLowerCase();
+
   const handleSaibaMais = (id) => {
-    navigate("/pageacomodacao", { state: { id } }); // Passando o ID como estado
+    navigate("/pageacomodacao", { state: { id } });
   };
 
   return (
     <div>
+      {console.log(cidade)}
       <div className="flex w-full h-[358px]">
         <img
-          src={`/src/assets/cidades/${cidade}.jpg`}
+          src={`/src/assets/cidades/${cidadeTrim}.jpg`}
           alt="Cidade"
           className="w-full h-full object-cover"
         />
