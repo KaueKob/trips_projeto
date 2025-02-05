@@ -4,32 +4,46 @@ Segue o passo a passo:
 
 Primeiramente verificar se estão instalados em sua máquina:
 
-Docker
-Docker Compose
-Node
-npm
+-Docker
+-Docker Compose
+-Node
+-npm
+
+---
 
 Feito essa verificação vamos começar rodando o banco de dados, pra isso podemos entrar no projeto, no diretorio projeto\_\_locacao, e no terminal digitar:
 
+```
 docker-compose up mysql_db -d (isso fará com que o banco de dados seja iniciado)
+```
 
+```
 docker-compose up --build backend -d (isso ira construir a API, conectando com o banco de dados anteriormente)
+```
+
+---
 
 Agora temos que rodar o front-end localmente, para isso vamos:
 
 Entrar no projeto no diretorio /trip-locacoes
 no terminal digitar
-npm install (para instalar as dependencias)
-e agora sim rodar com
-npm run dev
+
+- npm install (para instalar as dependencias)
+- npm run dev
+
+---
 
 Isso mostrará o front disponivel, em algum caminho parecido com (http://localhost:5173)
 
 Comentários para experiência do usuário:
 
-Quando for pesquisar por cidade, favor colocar os acentos como por exemplo São Paulo, cidades sem acento não tem esse preocupação apenas colocar com letra Maiscula de inicio.
+- O banco de dados deve estar rodando antes da API, garantindo que a conexão seja estabelecida corretamente.
 
-Existem algumas melhorias a serem feitas no site para exibir uma melhor experiência, entranto, como tive 3 dias para realizar o projeto foquei na parte funcional atendendo oq foi pedido no desafio, precisei fazer um equilibrio para poder entregar tudo a tempo.
+- Quando for pesquisar por cidade, favor colocar os acentos como por exemplo São Paulo, cidades sem acento não tem esse preocupação apenas colocar com letra Maiscula de inicio.
+
+- Existem algumas melhorias a serem feitas no site para exibir uma melhor experiência, entranto, como tive 3 dias para realizar o projeto foquei na parte funcional atendendo oq foi pedido no desafio, precisei fazer um equilibrio para poder entregar tudo a tempo.
+
+---
 
 Como pensei no projeto:
 
@@ -39,6 +53,8 @@ Utilizei para esse projeto algumas bibliotecas que tive experiencia em um outro 
 
 https://unicor.vercel.app
 Aqui foi postado uma previa do site como ficaria, e segue as mesmas bibliotecas do porjeto criado para esse desafio.
+
+---
 
 Sobre o figma:
 
