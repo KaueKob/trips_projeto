@@ -43,8 +43,13 @@ Agora temos que rodar o front-end localmente, para isso vamos:
 Entrar no projeto no diretorio /trip-locacoes
 no terminal digitar
 
-- npm install (para instalar as dependencias)
-- npm run dev
+```
+npm install
+```
+
+```
+npm run dev
+```
 
 ## Isso mostrará o front disponivel, em algum caminho parecido com (http://localhost:5173)
 
