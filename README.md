@@ -4,21 +4,13 @@ Segue o passo a passo:
 
 Primeiramente verificar se estão instalados em sua máquina:
 
-```
 -Docker
-```
 
-```
 -Docker Compose
-```
 
-```
 -Node
-```
 
-```
 -npm
-```
 
 ---
 
@@ -51,7 +43,7 @@ npm install
 npm run dev
 ```
 
-## Isso mostrará o front disponivel, em algum caminho parecido com (http://localhost:5173)
+### Isso mostrará o front disponivel, em algum caminho parecido com (http://localhost:5173)
 
 Comentários para experiência do usuário:
 
@@ -71,6 +63,8 @@ Utilizei para esse projeto algumas bibliotecas que tive experiencia em um outro 
 
 https://unicor.vercel.app
 Aqui foi postado uma previa do site como ficaria, e segue as mesmas bibliotecas do porjeto criado para esse desafio.
+O sistema está em homlogação em
+sistema.unicor.med.br
 
 ---
 
