@@ -4,22 +4,35 @@ Segue o passo a passo:
 
 Primeiramente verificar se estão instalados em sua máquina:
 
+```
 -Docker
+```
+
+```
 -Docker Compose
+```
+
 -Node
+
+```
 -npm
+```
 
 ---
 
 Feito essa verificação vamos começar rodando o banco de dados, pra isso podemos entrar no projeto, no diretorio projeto\_\_locacao, e no terminal digitar:
 
 ```
-docker-compose up mysql_db -d (isso fará com que o banco de dados seja iniciado)
+docker-compose up mysql_db -d
 ```
 
+-(isso fará com que o banco de dados seja iniciado)
+
 ```
-docker-compose up --build backend -d (isso ira construir a API, conectando com o banco de dados anteriormente)
+docker-compose up --build backend -d
 ```
+
+- (isso ira construir a API, conectando com o banco de dados anteriormente)
 
 ---
 
@@ -31,9 +44,7 @@ no terminal digitar
 - npm install (para instalar as dependencias)
 - npm run dev
 
----
-
-Isso mostrará o front disponivel, em algum caminho parecido com (http://localhost:5173)
+## Isso mostrará o front disponivel, em algum caminho parecido com (http://localhost:5173)
 
 Comentários para experiência do usuário:
 
