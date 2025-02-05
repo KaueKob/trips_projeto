@@ -8,7 +8,7 @@ const Procurarcidade = () => {
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    if (!cidade.trim()) return; // Evitar buscar se a cidade estiver vazia
+    if (!cidade.trim()) return;
 
     axios
       .get(`http://127.0.0.1:8000/acomodacoes/?cidade=${cidade}`)
@@ -35,7 +35,7 @@ const Procurarcidade = () => {
           segurança e praticidade.
         </span>
       </div>
-      <div className="flex space-x-3 items-center w-full max-w-[900px] mt-5 md:flex-col md:space-x-0 md:space-y-3">
+      <div className="flex space-x-3 items-center w-full max-w-[900px] mt-5">
         <input
           type="text"
           placeholder="Digite a Cidade de seu destino."

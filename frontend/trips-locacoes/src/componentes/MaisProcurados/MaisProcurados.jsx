@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const MaisProcurados = () => {
   const [acomodacoes, setAcomodacoes] = useState([]);
+  const [favoritos, setFavoritos] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,6 +26,18 @@ const MaisProcurados = () => {
       .catch((error) => console.error("Erro ao buscar acomodações:", error));
   }, []);
 
+  useEffect(() => {
+    // Carregar favoritos do localStorage
+    const storedFavoritos = JSON.parse(localStorage.getItem("favoritos")) || {};
+    setFavoritos(storedFavoritos);
+  }, []);
+
+  const toggleFavorito = (id) => {
+    const novosFavoritos = { ...favoritos, [id]: !favoritos[id] };
+    setFavoritos(novosFavoritos);
+    localStorage.setItem("favoritos", JSON.stringify(novosFavoritos));
+  };
+
   const handleSaibaMais = (id) => {
     navigate("/pageacomodacao", { state: { id } });
   };
@@ -37,6 +50,7 @@ const MaisProcurados = () => {
       <div className="flex flex-wrap justify-center gap-6 p-5">
         {acomodacoes.map((acomodacao) => {
           const imagePath = `/src/assets/acomodacoes/${acomodacao.imagem}`;
+          const isFavorito = favoritos[acomodacao.id];
 
           return (
             <div
@@ -49,8 +63,15 @@ const MaisProcurados = () => {
                   alt={acomodacao.imagem}
                   className="object-cover w-[350px] h-[350px] rounded-t-3xl"
                 />
-                <div className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md cursor-pointer">
-                  <FavoriteIcon className="w-6 h-6 text-red-500" />
+                <div
+                  className={`absolute top-3 right-3 p-2 rounded-full shadow-md cursor-pointer transitiongit`}
+                  onClick={() => toggleFavorito(acomodacao.id)}
+                >
+                  <FavoriteIcon
+                    className={`w-6 h-6 transition ${
+                      isFavorito ? "text-red-500" : "text-white"
+                    }`}
+                  />
                 </div>
                 <button
                   className="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-[#9a8989] text-white px-4 py-2 rounded-lg shadow-lg hover:bg-[#9a6262] transition"

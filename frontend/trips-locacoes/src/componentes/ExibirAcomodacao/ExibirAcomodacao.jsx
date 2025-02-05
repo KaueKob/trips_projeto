@@ -1,15 +1,14 @@
-import { useLocation } from "react-router-dom"; // Para pegar o estado
+import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const ExibirAcomodacao = () => {
-  const location = useLocation(); // Pegando o estado passado pela navegação
-  const { id } = location.state; // Acomodação ID
+  const location = useLocation();
+  const { id } = location.state;
 
   const [acomodacao, setAcomodacao] = useState(null);
 
   useEffect(() => {
-    // Fazer requisição para pegar os dados da acomodação com base no ID
     axios
       .get(`http://127.0.0.1:8000/acomodacoes/${id}`)
       .then((response) => {

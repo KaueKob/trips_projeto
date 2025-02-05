@@ -1,20 +1,33 @@
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const ExibirAcomCid = () => {
   const location = useLocation();
-  const navigate = useNavigate(); // Hook para navegação
+  const navigate = useNavigate();
   const { acomodacoes, cidade } = location.state || {
     acomodacoes: [],
     cidade: "",
   };
-  console.log(cidade, "cidade2");
+
+  const [favoritos, setFavoritos] = useState({});
+
+  useEffect(() => {
+    const storedFavoritos = JSON.parse(localStorage.getItem("favoritos")) || {};
+    setFavoritos(storedFavoritos);
+  }, []);
+
+  const toggleFavorito = (id) => {
+    const novosFavoritos = { ...favoritos, [id]: !favoritos[id] };
+    setFavoritos(novosFavoritos);
+    localStorage.setItem("favoritos", JSON.stringify(novosFavoritos));
+  };
+
   if (!cidade) {
     return <div>Sem cidade selecionada.</div>;
   }
 
-  //remoça˜o de acentos e espaços, seguindo post no stackoverflow
-  //https://stackoverflow.com/questions/990904/remove-accents-diacritics-in-a-string-in-javascript
+  // remoç~ao de acentos e espaços
   const cidadeTrim = cidade
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -27,7 +40,6 @@ const ExibirAcomCid = () => {
 
   return (
     <div>
-      {console.log(cidade)}
       <div className="flex w-full h-[358px]">
         <img
           src={`/src/assets/cidades/${cidadeTrim}.jpg`}
@@ -42,6 +54,7 @@ const ExibirAcomCid = () => {
         <div className="w-full flex flex-wrap justify-center sm:justify-between gap-5 p-7">
           {acomodacoes.map((acomodacao) => {
             const imagePath = `/src/assets/acomodacoes/${acomodacao.imagem}`;
+            const isFavorito = favoritos[acomodacao.id];
 
             return (
               <div
@@ -54,12 +67,19 @@ const ExibirAcomCid = () => {
                     alt={acomodacao.imagem}
                     className="object-cover w-full h-[350px] rounded-t-3xl"
                   />
-                  <div className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md cursor-pointer">
-                    <FavoriteIcon className="w-6 h-6 text-red-500" />
+                  <div
+                    className="absolute top-3 right-3 p-2 cursor-pointer transition"
+                    onClick={() => toggleFavorito(acomodacao.id)}
+                  >
+                    <FavoriteIcon
+                      className={`w-6 h-6 transition ${
+                        isFavorito ? "text-red-500" : "text-white"
+                      }`}
+                    />
                   </div>
                   <button
                     className="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-[#9a8989] text-white px-4 py-2 rounded-lg shadow-lg hover:bg-[#9a6262] transition"
-                    onClick={() => handleSaibaMais(acomodacao.id)} // Passa o ID para a próxima página
+                    onClick={() => handleSaibaMais(acomodacao.id)}
                   >
                     Saiba Mais
                   </button>
