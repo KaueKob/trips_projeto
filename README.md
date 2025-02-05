@@ -12,7 +12,9 @@ Primeiramente verificar se estão instalados em sua máquina:
 -Docker Compose
 ```
 
+```
 -Node
+```
 
 ```
 -npm
