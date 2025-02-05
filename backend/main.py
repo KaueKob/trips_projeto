@@ -11,7 +11,7 @@ acomodacoes = [
         "preco_noite": 250,
         "localizacao": "Campos do Jordão, SP",      
         "quartos": 1,
-        "PessoasMax": 2
+        "pessoasmax": 2
     },
     {
         "id": 2,
@@ -20,7 +20,7 @@ acomodacoes = [
         "preco_noite": 320,
         "localizacao": "Campos do Jordão, SP",
         "quartos": 2,
-        "PessoasMax": 4
+        "pessoasmax": 4
     },
     {
         "id": 3,
@@ -29,7 +29,7 @@ acomodacoes = [
         "preco_noite": 280,
         "localizacao": "Campos do Jordão, SP",      
         "quartos": 2,
-        "PessoasMax": 4
+        "pessoasmax": 4
     },
     {
         "id": 4,
@@ -38,7 +38,7 @@ acomodacoes = [
         "preco_noite": 200,
         "localizacao": "São Paulo, SP",      
         "quartos": 3,
-        "PessoasMax": 6
+        "pessoasmax": 6
     },
     {
         "id": 5,
@@ -47,7 +47,7 @@ acomodacoes = [
         "preco_noite": 240,
         "localizacao": "São Paulo, SP",      
         "quartos": 1,
-        "PessoasMax": 2
+        "pessoasmax": 2
     },
     {
         "id": 6,
@@ -56,7 +56,7 @@ acomodacoes = [
         "preco_noite": 500,
         "localizacao": "São Paulo, SP",      
         "quartos": 4,
-        "PessoasMax": 8
+        "pessoasmax": 8
     },
     {
         "id": 7,
@@ -65,7 +65,7 @@ acomodacoes = [
         "preco_noite": 180,
         "localizacao": "Gramado, RS",      
         "quartos": 1,
-        "PessoasMax": 2
+        "pessoasmax": 2
     },
     {
         "id": 8,
@@ -74,7 +74,7 @@ acomodacoes = [
         "preco_noite": 220,
         "localizacao": "Gramado, RS",      
         "quartos": 3,
-        "PessoasMax": 6
+        "pessoasmax": 6
   
     },
     {
@@ -84,7 +84,7 @@ acomodacoes = [
         "preco_noite": 260,
         "localizacao": "Gramado, RS",      
         "quartos": 2,
-        "PessoasMax": 4
+        "pessoasmax": 4
     },
     {
         "id": 10,
@@ -93,7 +93,7 @@ acomodacoes = [
         "preco_noite": 500,
         "localizacao": "Rio de Janeiro, RJ",      
         "quartos": 3,
-        "PessoasMax": 6
+        "pessoasmax": 6
     },
     {
         "id": 11,
@@ -102,7 +102,7 @@ acomodacoes = [
         "preco_noite": 350,
         "localizacao": "Rio de Janeiro, RJ",
         "quartos": 3,
-        "PessoasMax": 6
+        "pessoasmax": 6
     },
     {
         "id": 12,
@@ -111,7 +111,7 @@ acomodacoes = [
         "preco_noite": 700,
         "localizacao": "Rio de Janeiro, RJ",      
         "quartos": 5,
-        "PessoasMax": 10
+        "pessoasmax": 10
     },
 
     {
@@ -121,7 +121,7 @@ acomodacoes = [
         "preco_noite": 280,
         "localizacao": "Florianópolis, SC",      
         "quartos": 3,
-        "PessoasMax": 6
+        "pessoasmax": 6
     },
     {
         "id": 14,
@@ -130,7 +130,7 @@ acomodacoes = [
         "preco_noite": 400,
         "localizacao": "Florianópolis, SC",      
         "quartos": 3,
-        "PessoasMax": 6
+        "pessoasmax": 6
     },
     {
         "id": 15,
@@ -139,7 +139,7 @@ acomodacoes = [
         "preco_noite": 290,
         "localizacao": "Florianópolis, SC",      
         "quartos": 2,
-        "PessoasMax": 4
+        "pessoasmax": 4
     },
 
     {
@@ -149,7 +149,7 @@ acomodacoes = [
         "preco_noite": 270,
         "localizacao": "Curitiba, PR",      
         "quartos": 1,
-        "PessoasMax": 2
+        "pessoasmax": 2
     },
     {
         "id": 17,
@@ -158,7 +158,7 @@ acomodacoes = [
         "preco_noite": 310,
         "localizacao": "Curitiba, PR",     
         "quartos": 3,
-        "PessoasMax": 6
+        "pessoasmax": 6
     },
     {
         "id": 18,
@@ -167,7 +167,7 @@ acomodacoes = [
         "preco_noite": 350,
         "localizacao": "Curitiba, PR",      
         "quartos": 3,
-        "PessoasMax": 6
+        "pessoasmax": 6
     }
 ]
 
